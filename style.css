@@ -1,152 +1,160 @@
+/* Global Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom, #3498db, #2ecc71); /* Tech gradient background */
-    height: 100vh;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
 }
 
-.navbar {
-    background-color: #333;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  color: #212121;
+  margin-bottom: 10px;
 }
 
-.navbar .logo {
-    color: #fff;
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none;
+p {
+  margin-bottom: 20px;
 }
 
-.nav-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.nav-links li {
-    margin-right: 20px;
+a {
+  text-decoration: none;
+  color: #337ab7;
 }
 
-.nav-links a {
-    color: #fff;
-    text-decoration: none;
+a:hover {
+  color: #23527c;
 }
 
-.hero {
-    background-image: url("img/hero-bg.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
+/* Header Styles */
+
+header {
+  background-color: #337ab7;
+  padding: 20px;
+  text-align: center;
 }
 
-.hero h1 {
-    font-size: 48px;
-    font-weight: bold;
+header nav ul {
+  display: flex;
+  justify-content: space-between;
 }
 
-.hero p {
-    font-size: 24px;
+header nav li {
+  margin-right: 20px;
 }
 
-.hero .btn {
-    background-color: #2ecc71;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
+header nav a {
+  color: #fff;
 }
 
-.about {
-    background-color: #f9f9f9;
-    padding: 20px;
+header nav a:hover {
+  color: #ccc;
 }
 
-.about h2 {
-    font-size: 36px;
-    font-weight: bold;
+/* Main Styles */
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 
-.about p {
-    font-size: 18px;
+section {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.about .btn {
-    background-color: #2ecc71;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
+section h2 {
+  margin-top: 0;
 }
 
-.features {
-    background-color: #f9f9f9;
-    padding: 20px;
+/* Home Section Styles */
+
+#home {
+  background-image: linear-gradient(to bottom, #337ab7, #23527c);
+  background-size: 100% 300px;
+  background-position: 0% 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
 }
 
-.features h2 {
-    font-size: 36px;
-    font-weight: bold;
+#home h1 {
+  font-size: 48px;
 }
 
-.feature {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+/* About Section Styles */
+
+#about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.feature i {
-    font-size: 48px;
-    margin-right: 10px;
+#about p {
+  text-align: center;
 }
 
-.feature h3 {
-    font-size: 24px;
-    font-weight: bold;
+/* Services Section Styles */
+
+#services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.feature p {
-    font-size: 18px;
+#services li {
+  width: 30%;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
 }
 
-.github {
-    background-color: #f9f9f9;
-    padding: 20px;
+#services li:hover {
+  border-color: #337ab7;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.github h2 {
-    font-size: 36px;
-    font-weight: bold;
+/* Contact Section Styles */
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.github ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+#contact p {
+  text-align: center;
 }
 
-.github li {
-    margin-bottom: 10px;
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+  #services li {
+    width: 45%;
+  }
 }
 
-.github a {
-    text-decoration: none;
-    color: #2ecc71;
-}
-
-footer {
-    background-color: #333;
-    padding: 10px;
-    text-align: center;
-    color: #fff;
-}
+@media (max-width: 480px) {
+  #services li {
+    width: 100%;
+  }
+    }
