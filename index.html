@@ -70,14 +70,59 @@
     <ul>
         <li><a href="/qr">Qr</a></li>
         <li><a href="/var">VARIABLES</a></li>
-        <li><a href='https://github.com/SilvaTechB' > GITHUB </a></li>
+   <style>
+  #matrix-flow {
+    position: relative;
+    width: 500px; /* adjust the width to your needs */
+    height: 200px; /* adjust the height to your needs */
+    overflow: hidden;
+  }
+
+  .char {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 0;
+  }
+
+  .pixel {
+    display: inline-block;
+    width: 10px; /* adjust the width to your needs */
+    height: 10px; /* adjust the height to your needs */
+    background-color: #ccc; /* adjust the color to your needs */
+    margin: 2px; /* adjust the margin to your needs */
+       }    <li><a href='https://github.com/SilvaTechB' > GITHUB </a></li>
         <li><a href='https://github.com/SilvaTechB/silva-md-bot/wiki' > WIKI's </a></li>
         <li><a href='https://tiktok.com/@silva.edits6' > TIKTOK </a></li>
         <li><a href='https://wa.me/254743706010' > WHATSAPP </a></li>
     </ul>
-    <div id="matrix-flow">
-        <div class="char" id="S">
-            <div class="pixel"></div>
+    <style>
+  #matrix-flow {
+    position: relative;
+    width: 500px; /* adjust the width to your needs */
+    height: 200px; /* adjust the height to your needs */
+    overflow: hidden;
+  }
+
+  .char {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 0;
+  }
+
+  .pixel {
+    display: inline-block;
+    width: 10px; /* adjust the width to your needs */
+    height: 10px; /* adjust the height to your needs */
+    background-color: #ccc; /* adjust the color to your needs */
+    margin: 2px; /* adjust the margin to your needs */
+  }
+</style>
+
+<div id="matrix-flow">
+  <div class="char" id="S">
+    <div class="pixel"></div>
             <div class="pixel"></div>
             <div class="pixel"></div>
             <div class="pixel"></div>
@@ -198,9 +243,21 @@
             <div class="pixel"></div>
             <div class="pixel"></div>
             <div class="pixel"></div>
-            <!-- add more pixels to form the letter A -->
         </div>
-                </div>
+
+
+<script>
+  const chars = document.querySelectorAll('.char');
+  let charIndex = 0;
+
+  function animate() {
+    chars[charIndex].style.transform = 'translateY(-100%)';
+    charIndex = (charIndex + 1) % chars.length;
+    setTimeout(animate, 2000); // adjust the delay to your needs
+  }
+
+  animate();
+</script>
 
     <h1 style="color: #d4cfcf; "> SILVA TECH ❤️</h1>
 <br>
