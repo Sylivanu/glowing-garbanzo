@@ -1,0 +1,53 @@
+// Navigation Menu Toggle
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.querySelector('.nav-menu');
+
+navToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+});
+
+// Scroll to Section on Click
+const navLinks = document.querySelectorAll('.nav-link');
+
+navLinks.forEach(link => {
+  link.addEventListener('click', event => {
+    event.preventDefault();
+    const sectionId = link.getAttribute('href');
+    const section = document.querySelector(sectionId);
+    section.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+// Add Active Class to Current Section
+const sections = document.querySelectorAll('section');
+
+window.addEventListener('scroll', () => {
+  let currentSection = '';
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+    if (pageYOffset >= sectionTop - sectionHeight / 2) {
+      currentSection = section.getAttribute('id');
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === `#${currentSection}`) {
+      link.classList.add('active');
+    }
+  });
+});
+
+// Animate on Scroll
+const animateElements = document.querySelectorAll('.animate');
+
+window.addEventListener('scroll', () => {
+  animateElements.forEach(element => {
+    const elementTop = element.offsetTop;
+    const elementHeight = element.offsetHeight;
+    if (pageYOffset >= elementTop - elementHeight / 2) {
+      element.classList.add('animate-active');
+    }
+  });
+});
