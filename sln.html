@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silva Tech Solutions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2em;
+        }
+
+        section {
+            background-color: #f7f7f7;
+            padding: 1em;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#data-science">Data Science</a></li>
+                <li><a href="#research-development">Research Development</a></li>
+                <li><a href="#data-mining">Data Mining and Reporting</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="data-science">
+            <h2>Data Science</h2>
+            <p>Data migration, storage, manipulation, reporting, archiving, automation. No problem.</p>
+            <ul>
+                <li>Parsing through gigabytes of raw web log files to find content scraping bots and determine their source.</li>
+                <li>We processed an Access database of public voter records to the customer’s exact requirements.</li>
+                <li>We built an automated system for crawling public state court dockets to pull specific records on specific types of offenders.</li>
+                <!-- more list items -->
+            </ul>
+        </section>
+        <section id="research-development">
+            <h2>Research Development</h2>
+            <p>AI R&D, Rapid Software Prototyping, Facial Recognition,</p>
+        </section>
+        <section id="data-mining">
+            <h2>Data Mining and Reporting</h2>
+            <p>Finding needles in Data Haystacks, Extract, Manipulate and Summarize Data</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Silva Tech Solutions</p>
+    </footer>
+    <script>
+        // Add event listeners to navigation links
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', event => {
+                event.preventDefault();
+                const target = event.target.getAttribute('href');
+                document.querySelector(target).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
