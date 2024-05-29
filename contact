@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    
+    <a href="https://wa.me/{country-code}">
+        <img src="whatsapp-icon.png" alt="Whatsapp Icon"> {Country Name}
+    </a>
+    
+    <a href="https://wa.me/{country-code}">
+        <img src="whatsapp-icon.png" alt="Whatsapp Icon"> {Country Name}
+    </a>
+    
+    <a href="https://wa.me/{country-code}">
+        <img src="whatsapp-icon.png" alt="Whatsapp Icon"> {Country Name}
+    </a>
+</body>
+</html>
