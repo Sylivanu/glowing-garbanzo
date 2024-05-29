@@ -159,6 +159,38 @@ a:hover{
         silva tech is a <span style="border-bottom:4px dotted #3c3c3c; color: #d4cfcf;">Kenyan</span> tech organization developed by Sylivanus Momanyi.
         
     </h1>
+    
+  <script>
+    window.addEventListener("load", () => {
+      clock();
+      function clock() {
+        const today = new Date();
+
+        // get time components
+        const hou = today.getHours();
+        const min = today.getMinutes();
+        const sec = today.getSeconds();
+        const day = today.getDate();
+        const month = today.getMonth() + 1;
+        const year = today.getFullYear();
+
+        // format time components
+        const hourTime = hou < 10 ? "0" + hou : hou;
+        const minute = min < 10 ? "0" + min : min;
+        const second = sec < 10 ? "0" + sec : sec;
+        const monthList = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        // combine current date and time
+        const date = monthList[month - 1] + " " + day + ", " + year;
+        const time = hourTime + ":" + minute + ":" + second;
+
+        // print current date and time to the DOM
+        document.getElementById("date-time").innerHTML = date + " - " + time;
+
+        setTimeout(clock, 1000);
+      }
+    });
+  </script>
  <h1 align="center"> This is 𝑺𝒊𝒍𝒗𝒂 𝒕𝒆𝒄𝒉
   <img src="https://github.com/0xAbdulKhalid/0xAbdulKhalid/raw/main/assets/mdImages/handshake.gif" width="150">
 </h1>
