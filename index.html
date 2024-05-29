@@ -233,6 +233,28 @@ a:hover{
       </a>
     </td>
     <td width="50%"
+        <div style="position:absolute;top:0;right:0;font-size:2em;color:white;padding:10px;">
+  <span id="date"></span>
+  <span id="time"></span>
+</div>
+
+<script>
+  // Update the date and time every second
+  setInterval(function() {
+    // Create a new Date object
+    var now = new Date();
+
+    // Format the date as "Month Day, Year"
+    var date = [now.getMonth() + 1, now.getDate(), now.getFullYear()].join('/') + ' ';
+
+    // Format the time as "Hour:Minute:Second"
+    var time = [now.getHours(), now.getMinutes(), now.getSeconds()].join(':');
+
+    // Display the date and time
+    document.getElementById('date').textContent = date;
+    document.getElementById('time').textContent = time;
+  }, 1000);
+</script>
 </body>
 
     </html>
