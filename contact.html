@@ -1,21 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Contact Us</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
 </head>
 <body>
-    <h1>Contact Us</h1>
-    
-    <a href="https://wa.me/{country-code}">
-        <img src="whatsapp-icon.png" alt="Whatsapp Icon"> {Country Name}
-    </a>
-    
-    <a href="https://wa.me/{country-code}">
-        <img src="whatsapp-icon.png" alt="Whatsapp Icon"> {Country Name}
-    </a>
-    
-    <a href="https://wa.me/{country-code}">
-        <img src="whatsapp-icon.png" alt="Whatsapp Icon"> {Country Name}
-    </a>
+  <form id="contactForm">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br>
+    <label for="phone">Phone number (in international format):</label><br>
+    <input type="tel" id="phone" name="phone" required><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const contacts = [];
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+
+      if (contacts.length < 200) {
+        contacts.push({ name, phone });
+
+        // Clear the form fields
+        document.getElementById('name').value = '';
+        document.getElementById('phone').value = '';
+
+        // Display a success message
+        alert(`Contact added! (Contact ${contacts.length}/200)`);
+
+        // If we've reached 200 contacts, disable the form
+        if (contacts.length === 200) {
+          form.disabled = true;
+          alert('All contact slots have been filled. Form is now disabled.');
+        }
+      } else {
+        alert('Maximum number of contacts (200) has been reached.');
+      }
+
+      // Generate the CSV file
+      generateCsv();
+    });
+
+    function generateCsv() {
+      const csvContent = 'Name,Phone\n';
+
+      contacts.forEach((contact) => {
+        csvContent += `${contact.name},${contact.phone}\n`;
+      });
+
+      const blob = new Blob([csvContent], { type: 'text/csv' });
+      const url = URL.createObjectURL(blob);
+
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'contacts.csv';
+      a.click();
+    }
+  </script>
 </body>
 </html>
